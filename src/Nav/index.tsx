@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 import {
   AppBar,
   Typography,
   CssBaseline,
   Toolbar,
-  Button,
   ButtonGroup,
-} from '@mui/material'
-import { Link } from 'react-router-dom'
+} from '@mui/material';
+//import { Link } from 'react-router-dom'
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 export default function NavBar() {
   return (
     <>
       <CssBaseline />
-      <AppBar position="relative">
+      <AppBar position="sticky">
         <Toolbar>
           <Typography variant="h6">Portfolio</Typography>
           <ButtonGroup
@@ -21,21 +21,49 @@ export default function NavBar() {
             color="secondary"
             aria-label="text button group"
           >
-            <Link to="about">
-              <Button>About</Button>
+            <Link
+              to="about"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              About
             </Link>
-            <Link to="experience">
-              <Button>Experience</Button>
+            <Link
+              to="experience"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Experience
             </Link>
-            <Link to="projects">
-              <Button>Projects</Button>
+            <Link
+              to="projects"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Projects
             </Link>
-            <Link to="contact">
-              <Button>Contact</Button>
+            <Link
+              to="contact"
+              activeClass="active"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              Contact
             </Link>
           </ButtonGroup>
         </Toolbar>
       </AppBar>
     </>
-  )
+  );
 }
