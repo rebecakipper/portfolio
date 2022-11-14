@@ -5,24 +5,31 @@ import {
   CssBaseline,
   Toolbar,
   Box,
-  IconButton,
-  Button,
+  Link,
 } from '@mui/material';
-//import { Link } from 'react-router-dom'
-import { Link, animateScroll as scroll } from 'react-scroll';
-
 import { Links } from './links/links';
-import MenuIcon from '@mui/icons-material/Menu';
 
 export default function NavBar() {
   return (
     <>
       <CssBaseline />
       <Box>
-        <AppBar position="sticky">
+        <AppBar
+          position="fixed"
+          sx={{
+            backgroundColor: 'rgba(0,0,0,0.6)',
+            backdropFilter: 'blur(8px)',
+          }}
+        >
           <Toolbar sx={{ alignItems: 'strech' }}>
-            <Typography align="left" variant="h6" sx={{ flexGrow: 1 }}>
-              Portfolio
+            <Typography
+              align="left"
+              variant="h6"
+              sx={{ flexGrow: 1, marginLeft: 12 }}
+            >
+              <Link href="/">
+                <img src="./Logo-White.png" alt="logo" height="40px" />
+              </Link>
             </Typography>
             <Links />
           </Toolbar>

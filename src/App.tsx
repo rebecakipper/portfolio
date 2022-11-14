@@ -13,6 +13,9 @@ import NavBar from './Nav';
 import { HashRouter, Route } from 'react-router-dom';
 import { HeroSection } from './HeroSection';
 import { LeftSocial } from './LeftSocialShortcuts';
+import { ExperienceSection } from './Experience';
+import { ProjectsSection } from './Projects';
+import { ContactSection } from './ContactMe';
 
 const theme = createTheme({
   palette: {
@@ -48,23 +51,16 @@ function App() {
               <Box id="about">
                 <HeroSection />
               </Box>
+              <Box id="experience">
+                <ExperienceSection />
+              </Box>
+              <Box id="projects">
+                <ProjectsSection />
+              </Box>
+              <Box id="contact">
+                <ContactSection />
+              </Box>
             </Route>
-            <Route path="/">
-              <div id="experience">
-                <Typography variant="h1">Experience</Typography>
-              </div>
-              <div id="projects">
-                <Typography variant="h1">Projects</Typography>
-              </div>
-            </Route>
-            <Route path="/">
-              <div id="contact">
-                <Typography variant="h1">Contact</Typography>
-              </div>
-            </Route>
-            <div>
-              <Typography variant="h1">wHATEVER</Typography>
-            </div>
           </main>
         </Paper>
       </HashRouter>

@@ -6,10 +6,10 @@ export const HeroSection = () => {
     <Box
       sx={{
         height: '100vh',
-        backgroundColor: 'primary.dark',
+        backgroundColor: 'primary',
       }}
     >
-      <Box ml={16}>
+      <Box ml={16} mt={8}>
         <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
           Hi there...
         </Typography>
