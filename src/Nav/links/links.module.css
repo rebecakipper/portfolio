@@ -1,0 +1,17 @@
+.btn {
+  background-color: red;
+}
+
+.links {
+  /* background-color: red; */
+}
+
+.link {
+  cursor: pointer;
+}
+
+.link:hover {
+  cursor: pointer;
+  color: #ffde59;
+  font-weight: bolder;
+}

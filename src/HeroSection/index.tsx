@@ -1,43 +1,33 @@
 import React from 'react';
-import {
-  AppBar,
-  Button,
-  Typography,
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  CssBaseline,
-  Grid,
-  Toolbar,
-  Container,
-  Icon,
-  createTheme,
-  colors,
-  ThemeProvider,
-  Paper,
-} from '@mui/material';
+import { Typography, Container, Box } from '@mui/material';
 
-export const Section = () => {
+export const HeroSection = () => {
   return (
-    <Container maxWidth="sm" bg-color="blue">
-      <Typography variant="h1" align="center" color="textPrimary" gutterBottom>
-        Welcome to My Portfolio
-      </Typography>
-      <Typography variant="h5" align="center" color="textSecondary" paragraph>
-        My name is Rebeca, Im a full stack web developer.
-      </Typography>
-      <Typography
-        variant="body1"
-        align="center"
-        color="textSecondary"
-        paragraph
-      >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum nesciunt
-        repellat explicabo laborum numquam, corrupti iste iure itaque quibusdam?
-        Maxime harum fugiat ad quia nesciunt ipsum? Exercitationem placeat
-        tempore blanditiis.
-      </Typography>
-    </Container>
+    <Box
+      sx={{
+        height: '100vh',
+        backgroundColor: 'primary.dark',
+      }}
+    >
+      <Box ml={16}>
+        <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
+          Hi there...
+        </Typography>
+        <Typography variant="h1" align="left" color="textSecondary" paragraph>
+          I am Rebeca,
+          <Typography variant="h1" align="left" color="textSecondary" paragraph>
+            a web developer
+            <Typography
+              variant="h1"
+              align="left"
+              color="textSecondary"
+              paragraph
+            >
+              based in Berlin.
+            </Typography>
+          </Typography>
+        </Typography>
+      </Box>
+    </Box>
   );
 };

@@ -1,10 +1,10 @@
-import { fancyUtil } from "./utils";
-import "./loginButton.css";
+import { fancyUtil } from './utils';
+import styles from './loginButton.module.css';
 
 export const LoginButton = () => {
-    return (
-        <button onClick={fancyUtil} className="btn">
-            loginButton
-        </button>
-    );
+  return (
+    <button onClick={fancyUtil} className={styles.btn}>
+      loginButton
+    </button>
+  );
 };
