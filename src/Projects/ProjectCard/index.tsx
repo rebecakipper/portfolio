@@ -1,23 +1,30 @@
-import { Typography, Box, Grid } from '@mui/material';
-import * as React from 'react';
-import { ProjectCard } from './ProjectCard';
-import { useState, useEffect } from 'react';
+import React from 'react';
+import { useEffect, useState } from 'react';
+import {
+  Typography,
+  Box,
+  Card,
+  CardContent,
+  CardMedia,
+  Link,
+} from '@mui/material';
+import { CardActionArea } from '@mui/material';
+import { AnalyticsTwoTone } from '@mui/icons-material';
 
-type MyProject = {
+type Project = {
   title: string;
   imageUrl: string;
   description: string;
   githubUrl: string;
 };
 
-type Projects = MyProject[];
+type Projects = Project[];
 
 interface Props {
+  project: Project;
   toggleModal: Function;
-  arrayProjects: Projects;
 }
-
-// const arrayProjects: MyProject[] = [
+// const arrayProjects: Project[] = [
 //   {
 //     title: 'Connect 4',
 //     imageUrl: './Logo-White.png',
@@ -55,38 +62,41 @@ interface Props {
 //   },
 // ];
 
-export const ProjectsSection = ({ toggleModal, arrayProjects }: Props) => {
+export const ProjectCard = (prop: Props) => {
+  const [modalActive, setModalActive] = useState(false);
+
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
+    return prop.toggleModal();
+  };
+
   return (
-    <Box
-      sx={{
-        height: '100vh',
-        backgroundColor: 'primary',
-      }}
-    >
-      <Box ml={16}>
-        <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
-          This is my Projects section
-        </Typography>
-        <Typography
-          variant="body1"
-          align="left"
-          color="textPrimary"
-          gutterBottom
+    <Box>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardActionArea
+          onClick={(e: React.MouseEvent<HTMLElement>) => handleClick(e)}
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam illo
-          nam, iure laborum, eum aperiam cupiditate possimus autem vitae ipsa
-          vel nostrum tempore obcaecati illum quis voluptas nemo reprehenderit
-          qui!
-        </Typography>
-        <Grid container direction="row" spacing={4} sx={{ flexWrap: 'wrap' }}>
-          {arrayProjects &&
-            arrayProjects.map((project) => (
-              <Grid item xs={4}>
-                <ProjectCard project={project} toggleModal={toggleModal} />
-              </Grid>
-            ))}
-        </Grid>
-      </Box>
+          <CardMedia
+            component="img"
+            height="200"
+            image={prop.project.imageUrl}
+            alt={prop.project.title}
+            sx={{ obejectFit: 'cover' }}
+          />
+          <CardContent
+            sx={{
+              backgroundColor: 'rgba(0,0,0,0.6)',
+              backdropFilter: 'blur(8px)',
+            }}
+          >
+            <Typography gutterBottom variant="h5" component="div">
+              {prop.project.title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {prop.project.description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     </Box>
   );
 };

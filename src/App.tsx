@@ -38,7 +38,62 @@ const theme = createTheme({
   },
 });
 
+type MyProject = {
+  title: string;
+  imageUrl: string;
+  description: string;
+  githubUrl: string;
+};
+
+type Projects = MyProject[];
+
 function App() {
+  const [modalActive, setModalActive] = useState(false);
+  const toggleModal = () => {
+    console.log(modalActive);
+
+    setModalActive(!modalActive);
+    return console.log(modalActive);
+  };
+
+  const arrayProjects: Projects = [
+    {
+      title: 'Connect 4',
+      imageUrl: './Logo-White.png',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+      githubUrl: 'https://github.com/rebecakipper',
+    },
+    {
+      title: 'Petition',
+      imageUrl: './Logo-White.png',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+      githubUrl: 'https://github.com/rebecakipper',
+    },
+    {
+      title: 'Imageboard',
+      imageUrl: './Logo-White.png',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+      githubUrl: 'https://github.com/rebecakipper',
+    },
+    {
+      title: 'Social Media',
+      imageUrl: './Logo-White.png',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+      githubUrl: 'https://github.com/rebecakipper',
+    },
+    {
+      title: 'Personal Portfolio',
+      imageUrl: './Logo-White.png',
+      description:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+      githubUrl: 'https://github.com/rebecakipper',
+    },
+  ];
+
   return (
     <ThemeProvider theme={theme}>
       <HashRouter>
@@ -47,6 +102,7 @@ function App() {
           <NavBar />
           <main>
             <LeftSocial />
+            {/* {modalActive && <Modal />} */}
             <Route path="/">
               <Box id="about">
                 <HeroSection />
@@ -55,7 +111,10 @@ function App() {
                 <ExperienceSection />
               </Box>
               <Box id="projects">
-                <ProjectsSection />
+                <ProjectsSection
+                  toggleModal={toggleModal}
+                  arrayProjects={arrayProjects}
+                />
               </Box>
               <Box id="contact">
                 <ContactSection />
