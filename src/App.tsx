@@ -16,6 +16,7 @@ import { LeftSocial } from './LeftSocialShortcuts';
 import { ExperienceSection } from './Experience';
 import { ProjectsSection } from './Projects';
 import { ContactSection } from './ContactMe';
+import { ProjectModal } from './ProjectModal';
 
 const theme = createTheme({
   palette: {
@@ -39,6 +40,7 @@ const theme = createTheme({
 });
 
 type MyProject = {
+  id: number;
   title: string;
   imageUrl: string;
   description: string;
@@ -49,15 +51,12 @@ type Projects = MyProject[];
 
 function App() {
   const [modalActive, setModalActive] = useState(false);
-  const toggleModal = () => {
-    console.log(modalActive);
-
-    setModalActive(!modalActive);
-    return console.log(modalActive);
-  };
-
+  const [modalToDisplay, setModalToDisplay] = useState<MyProject | undefined>(
+    undefined
+  );
   const arrayProjects: Projects = [
     {
+      id: 1,
       title: 'Connect 4',
       imageUrl: './Logo-White.png',
       description:
@@ -65,6 +64,7 @@ function App() {
       githubUrl: 'https://github.com/rebecakipper',
     },
     {
+      id: 2,
       title: 'Petition',
       imageUrl: './Logo-White.png',
       description:
@@ -72,6 +72,7 @@ function App() {
       githubUrl: 'https://github.com/rebecakipper',
     },
     {
+      id: 3,
       title: 'Imageboard',
       imageUrl: './Logo-White.png',
       description:
@@ -79,6 +80,7 @@ function App() {
       githubUrl: 'https://github.com/rebecakipper',
     },
     {
+      id: 4,
       title: 'Social Media',
       imageUrl: './Logo-White.png',
       description:
@@ -86,6 +88,7 @@ function App() {
       githubUrl: 'https://github.com/rebecakipper',
     },
     {
+      id: 5,
       title: 'Personal Portfolio',
       imageUrl: './Logo-White.png',
       description:
@@ -93,6 +96,17 @@ function App() {
       githubUrl: 'https://github.com/rebecakipper',
     },
   ];
+
+  const toggleModal = (id: number) => {
+    console.log(modalActive);
+    arrayProjects.forEach((project) => {
+      if (project.id === id) {
+        setModalToDisplay(project);
+      }
+    });
+
+    setModalActive(!modalActive);
+  };
 
   return (
     <ThemeProvider theme={theme}>
@@ -102,7 +116,14 @@ function App() {
           <NavBar />
           <main>
             <LeftSocial />
-            {/* {modalActive && <Modal />} */}
+            {modalActive && modalToDisplay && (
+              <ProjectModal
+                project={modalToDisplay}
+                isOpen={modalActive}
+                closeModal={() => setModalActive(false)}
+              />
+            )}
+
             <Route path="/">
               <Box id="about">
                 <HeroSection />

@@ -4,6 +4,7 @@ import { ProjectCard } from './ProjectCard';
 import { useState, useEffect } from 'react';
 
 type MyProject = {
+  id: number;
   title: string;
   imageUrl: string;
   description: string;

@@ -12,6 +12,7 @@ import { CardActionArea } from '@mui/material';
 import { AnalyticsTwoTone } from '@mui/icons-material';
 
 type Project = {
+  id: number;
   title: string;
   imageUrl: string;
   description: string;
@@ -24,49 +25,12 @@ interface Props {
   project: Project;
   toggleModal: Function;
 }
-// const arrayProjects: Project[] = [
-//   {
-//     title: 'Connect 4',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-//   {
-//     title: 'Petition',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-//   {
-//     title: 'Imageboard',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-//   {
-//     title: 'Social Media',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-//   {
-//     title: 'Personal Portfolio',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-// ];
 
 export const ProjectCard = (prop: Props) => {
   const [modalActive, setModalActive] = useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
-    return prop.toggleModal();
+    return prop.toggleModal(prop.project.id);
   };
 
   return (
