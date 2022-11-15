@@ -11,7 +11,7 @@ export const HeroSection = () => {
     >
       <Box ml={16} mt={8}>
         <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
-          Hi there...
+          Hello World...
         </Typography>
         <Typography variant="h1" align="left" color="textSecondary" paragraph>
           I am Rebeca,
