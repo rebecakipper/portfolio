@@ -1,5 +1,10 @@
-import { Typography, Box, Modal } from '@mui/material';
+import { Typography, Box, Modal, IconButton, Fab } from '@mui/material';
+import { Container, flexbox } from '@mui/system';
 import { ProjectCard } from '../Projects/ProjectCard';
+import CloseIcon from '@mui/icons-material/Close';
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+import { relative } from 'path';
 type MyProject = {
   id: number;
   title: string;
@@ -26,15 +31,33 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
       <Box
         id="modal"
         sx={{
-          height: '100vh',
-          width: '95vw',
-          backgroundColor: 'rgba(0,0,0,0.6)',
+          height: '85vh',
+          width: '85vw',
+          backgroundColor: 'rgba(0,0,0,0.9)',
           backdropFilter: 'blur(8px)',
           position: 'fixed',
           zIndex: '100',
+          alignText: 'center',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          borderRadius: '16px',
         }}
       >
-        <Box ml={16}>
+        <IconButton
+          color="primary"
+          aria-label="close modal"
+          component="label"
+          sx={{
+            dispay: 'flex',
+            position: 'absolute',
+            right: '16px',
+            top: '16px',
+          }}
+        >
+          <CloseIcon onClick={closeModal} sx={{ color: 'white' }} />
+        </IconButton>
+        <Box p={16}>
           <Typography
             variant="h3"
             align="left"
@@ -43,6 +66,14 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
           >
             {project.title}
           </Typography>
+
+          <img
+            src={project.imageUrl}
+            alt={project.title}
+            height="300px"
+            width="300px"
+          />
+
           <Typography
             variant="body1"
             align="left"
@@ -51,6 +82,23 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
           >
             {project.description}
           </Typography>
+          <Fab
+            size="small"
+            aria-label="LinkedIn"
+            href="https://github.com/rebecakipper"
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              backgroundColor: 'transparent',
+              color: 'secondary.main',
+              '&:hover': {
+                backgroundColor: 'transparent',
+                color: 'secondary.light',
+              },
+            }}
+          >
+            <GitHubIcon />
+          </Fab>
         </Box>
       </Box>
     </Modal>

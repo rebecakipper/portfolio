@@ -18,49 +18,11 @@ interface Props {
   arrayProjects: Projects;
 }
 
-// const arrayProjects: MyProject[] = [
-//   {
-//     title: 'Connect 4',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-//   {
-//     title: 'Petition',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-//   {
-//     title: 'Imageboard',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-//   {
-//     title: 'Social Media',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-//   {
-//     title: 'Personal Portfolio',
-//     imageUrl: './Logo-White.png',
-//     description:
-//       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-//     githubUrl: 'https://github.com/rebecakipper',
-//   },
-// ];
-
 export const ProjectsSection = ({ toggleModal, arrayProjects }: Props) => {
   return (
     <Box
       sx={{
-        height: '100vh',
+        minHeight: '100vh',
         backgroundColor: 'primary',
       }}
     >
@@ -82,7 +44,7 @@ export const ProjectsSection = ({ toggleModal, arrayProjects }: Props) => {
         <Grid container direction="row" spacing={4} sx={{ flexWrap: 'wrap' }}>
           {arrayProjects &&
             arrayProjects.map((project) => (
-              <Grid item xs={4}>
+              <Grid item xs={4} key={project.id}>
                 <ProjectCard project={project} toggleModal={toggleModal} />
               </Grid>
             ))}

@@ -10,7 +10,7 @@ import {
   Box,
 } from '@mui/material';
 import NavBar from './Nav';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
 import { HeroSection } from './HeroSection';
 import { LeftSocial } from './LeftSocialShortcuts';
 import { ExperienceSection } from './Experience';
@@ -110,11 +110,11 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <HashRouter>
+      <BrowserRouter>
         <Paper className="App">
           <CssBaseline />
           <NavBar />
-          <main>
+          <main id="home">
             <LeftSocial />
             {modalActive && modalToDisplay && (
               <ProjectModal
@@ -124,26 +124,27 @@ function App() {
               />
             )}
 
-            <Route path="/">
-              <Box id="about">
-                <HeroSection />
-              </Box>
-              <Box id="experience">
-                <ExperienceSection />
-              </Box>
-              <Box id="projects">
-                <ProjectsSection
-                  toggleModal={toggleModal}
-                  arrayProjects={arrayProjects}
-                />
-              </Box>
-              <Box id="contact">
-                <ContactSection />
-              </Box>
-            </Route>
+            <Box id="about">
+              <HeroSection />
+            </Box>
+
+            <Box id="experience">
+              <ExperienceSection />
+            </Box>
+
+            <Box id="projects">
+              <ProjectsSection
+                toggleModal={toggleModal}
+                arrayProjects={arrayProjects}
+              />
+            </Box>
+
+            <Box id="contact">
+              <ContactSection />
+            </Box>
           </main>
         </Paper>
-      </HashRouter>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }

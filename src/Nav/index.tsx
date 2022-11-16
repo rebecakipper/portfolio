@@ -1,13 +1,7 @@
 import React from 'react';
-import {
-  AppBar,
-  Typography,
-  CssBaseline,
-  Toolbar,
-  Box,
-  Link,
-} from '@mui/material';
+import { AppBar, Typography, CssBaseline, Toolbar, Box } from '@mui/material';
 import { Links } from './links/links';
+import { HashLink } from 'react-router-hash-link';
 
 export default function NavBar() {
   return (
@@ -27,9 +21,9 @@ export default function NavBar() {
               variant="h6"
               sx={{ flexGrow: 1, marginLeft: 12 }}
             >
-              <Link href="/">
+              <HashLink smooth to="#home">
                 <img src="./Logo-White.png" alt="logo" height="40px" />
-              </Link>
+              </HashLink>
             </Typography>
             <Links />
           </Toolbar>

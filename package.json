@@ -22,6 +22,7 @@
     "react-redux": "^7.2.9",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.3.4",
+    "react-router-hash-link": "^2.4.3",
     "react-scripts": "5.0.1",
     "react-scroll": "^1.8.8",
     "typescript": "^4.8.4",
@@ -56,6 +57,7 @@
     "@types/react-dom": "^18.0.8",
     "@types/react-router": "^5.1.19",
     "@types/react-router-dom": "^5.3.3",
+    "@types/react-router-hash-link": "^2.4.5",
     "@types/react-scroll": "^1.8.4"
   }
 }

@@ -8,10 +8,11 @@
 
 .link {
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 .link:hover {
   cursor: pointer;
   color: #ffde59;
-  font-weight: bolder;
 }

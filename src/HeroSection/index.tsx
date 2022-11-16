@@ -7,6 +7,8 @@ export const HeroSection = () => {
       sx={{
         height: '100vh',
         backgroundColor: 'primary',
+        justifyContent: 'center',
+        alignItems: 'center',
       }}
     >
       <Box ml={16} mt={8}>
