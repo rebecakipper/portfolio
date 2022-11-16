@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, Container, Box, Grid } from '@mui/material';
+import style from './index.module.css';
 
 export const HeroSection = () => {
   return (
@@ -14,40 +15,50 @@ export const HeroSection = () => {
       <Grid
         container
         spacing={0}
-        direction="column"
+        direction="row"
         alignItems="center"
-        justifyContent="center"
+        // justifyContent="center"
         style={{ minHeight: '100vh' }}
       >
-        <Box ml={16} mt={8}>
-          <Typography
-            variant="h3"
-            align="left"
-            color="textPrimary"
-            gutterBottom
-          >
-            Hello World...
-          </Typography>
-          <Typography variant="h1" align="left" color="textSecondary" paragraph>
-            I am Rebeca,
+        <Grid item xs={8}>
+          <Box ml={16} mt={8} mr={16}>
+            <Typography
+              variant="h3"
+              align="left"
+              color="textPrimary"
+              gutterBottom
+            >
+              Hello World...
+            </Typography>
             <Typography
               variant="h1"
               align="left"
               color="textSecondary"
               paragraph
             >
-              a web developer
+              I am Rebeca,
               <Typography
                 variant="h1"
                 align="left"
                 color="textSecondary"
                 paragraph
               >
-                based in Berlin.
+                a web developer
+                <Typography
+                  variant="h1"
+                  align="left"
+                  color="textSecondary"
+                  paragraph
+                >
+                  based in Berlin.
+                </Typography>
               </Typography>
             </Typography>
-          </Typography>
-        </Box>
+          </Box>
+        </Grid>
+        <Grid item xs={2}>
+          <img src="./rebeca-profile.png" alt="r" className={style.profile} />
+        </Grid>
       </Grid>
     </Box>
   );

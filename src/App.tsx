@@ -67,7 +67,7 @@ function App() {
     {
       id: 2,
       title: 'Petition',
-      imageUrl: './Logo-White.png',
+      imageUrl: './petition-sample.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
       githubUrl: 'https://github.com/rebecakipper',
@@ -76,7 +76,7 @@ function App() {
     {
       id: 3,
       title: 'Imageboard',
-      imageUrl: './Logo-White.png',
+      imageUrl: './imageboard-sample.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
       githubUrl: 'https://github.com/rebecakipper',
@@ -85,7 +85,7 @@ function App() {
     {
       id: 4,
       title: 'Social Media',
-      imageUrl: './Logo-White.png',
+      imageUrl: './socialnetwork-sample.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
       githubUrl: 'https://github.com/rebecakipper',

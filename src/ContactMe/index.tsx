@@ -9,7 +9,13 @@ export const ContactSection = () => {
       }}
     >
       <Box ml={16}>
-        <Typography variant="h1" align="left" color="textPrimary" gutterBottom>
+        <Typography
+          // href="mailto:rebecakipper@gmal.com"
+          variant="h1"
+          align="left"
+          color="textPrimary"
+          gutterBottom
+        >
           Get in touch
         </Typography>
       </Box>
