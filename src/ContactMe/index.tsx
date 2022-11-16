@@ -1,4 +1,4 @@
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, Link } from '@mui/material';
 
 export const ContactSection = () => {
   return (
@@ -8,15 +8,30 @@ export const ContactSection = () => {
         backgroundColor: 'primary',
       }}
     >
-      <Box ml={16}>
+      <Box mt={32}>
         <Typography
           // href="mailto:rebecakipper@gmal.com"
           variant="h1"
-          align="left"
+          align="center"
           color="textPrimary"
           gutterBottom
         >
-          Get in touch
+          <Link
+            href="mailto:rebecakipper@gmal.com"
+            underline="hover"
+            sx={{ color: 'white' }}
+          >
+            Get in touch!
+          </Link>
+        </Typography>
+        <Typography
+          // href="mailto:rebecakipper@gmal.com"
+          variant="h5"
+          align="center"
+          color="textPrimary"
+          gutterBottom
+        >
+          email:rebecakipper@gmail.com
         </Typography>
       </Box>
     </Box>

@@ -1,19 +1,14 @@
-.profile {
-  object-fit: cover;
-  max-height: 400px;
-}
-
-.rebs::before {
+.animate::before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-.rebs:hover::before {
+.animate:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-.rebs::before {
+.animate::before {
   content: ' ';
   display: block;
   position: absolute;
@@ -27,7 +22,7 @@
   transition: transform 0.3s ease;
 }
 
-.rebs {
+.animate {
   position: relative;
   /* font-size: 5rem; */
   text-decoration: none;

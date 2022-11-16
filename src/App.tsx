@@ -94,10 +94,10 @@ function App() {
     {
       id: 5,
       title: 'Personal Portfolio',
-      imageUrl: './Logo-White.png',
+      imageUrl: './portfolio_sample.png',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
-      githubUrl: 'https://github.com/rebecakipper',
+        'Personal portifolio Project, created on React and Typescript, using custome Material UI theme',
+      githubUrl: 'https://github.com/rebecakipper/portfolio',
       stack: 'React, Typescript, Material UI',
     },
   ];

@@ -3,6 +3,7 @@ import { Container, flexbox } from '@mui/system';
 import { ProjectCard } from '../Projects/ProjectCard';
 import CloseIcon from '@mui/icons-material/Close';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import styles from './index.module.css';
 
 import { relative } from 'path';
 type MyProject = {
@@ -59,9 +60,18 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
         >
           <CloseIcon onClick={closeModal} sx={{ color: 'white' }} />
         </IconButton>
-        <Box py={8} px={16}>
+        <Box
+          py={8}
+          px={16}
+          sx={{
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignContent: 'center',
+          }}
+        >
           <Typography
-            variant="h3"
+            variant="h2"
             align="left"
             color="textPrimary"
             gutterBottom
@@ -72,12 +82,11 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
           <img
             src={project.imageUrl}
             alt={project.title}
-            height="300px"
-            width="300px"
+            className={styles.image}
           />
 
           <Typography
-            variant="body1"
+            variant="h5"
             align="left"
             color="textPrimary"
             gutterBottom
@@ -85,12 +94,12 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
             {project.description}
           </Typography>
           <Typography variant="subtitle2" color="text.secondary">
-            {project.stack}
+            Technologies: {project.stack}
           </Typography>
           <Fab
             size="small"
             aria-label="LinkedIn"
-            href="https://github.com/rebecakipper"
+            href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
             sx={{

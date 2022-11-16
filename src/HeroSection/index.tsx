@@ -36,7 +36,14 @@ export const HeroSection = () => {
               color="textSecondary"
               paragraph
             >
-              I am Rebeca,
+              I am{' '}
+              <Box
+                component="span"
+                sx={{ p: 0, borderBottom: '3px solid #ffde59' }}
+                className={style.rebs}
+              >
+                Rebeca
+              </Box>{' '}
               <Typography
                 variant="h1"
                 align="left"

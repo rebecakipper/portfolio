@@ -24,8 +24,9 @@ export const Links = () => {
         return (
           <Box
             component="span"
-            sx={{ p: 2, borderBottom: '7px solid #ffde59' }}
+            sx={{ p: 2, borderBottom: '3px solid #ffde59' }}
             key={title}
+            className={styles.underline}
           >
             <HashLink
               smooth

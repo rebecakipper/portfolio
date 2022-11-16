@@ -27,20 +27,13 @@ export const ProjectsSection = ({ toggleModal, arrayProjects }: Props) => {
         backgroundColor: 'primary',
       }}
     >
-      <Box ml={16}>
-        <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
+      <Box mx={16}>
+        <Typography variant="h1" align="left" color="textPrimary" gutterBottom>
           Projects
         </Typography>
-        <Typography
-          variant="body1"
-          align="left"
-          color="textPrimary"
-          gutterBottom
-        >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam illo
-          nam, iure laborum, eum aperiam cupiditate possimus autem vitae ipsa
-          vel nostrum tempore obcaecati illum quis voluptas nemo reprehenderit
-          qui!
+        <Typography variant="h6" align="left" color="textPrimary" gutterBottom>
+          Project developed at the SPICED Academy 12-week Full-Stack
+          WebDevelopment Bootcamp from 08.2022 to 11.2022:
         </Typography>
         <Grid container direction="row" spacing={4} sx={{ flexWrap: 'wrap' }}>
           {arrayProjects &&

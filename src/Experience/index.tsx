@@ -1,4 +1,5 @@
 import { Typography, Box } from '@mui/material';
+import styles from './index.module.css';
 
 export const ExperienceSection = () => {
   return (
@@ -8,16 +9,17 @@ export const ExperienceSection = () => {
         backgroundColor: 'primary',
       }}
     >
-      <Box ml={16}>
-        <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
-          Skills
-        </Typography>
+      <Box mx={16}>
         <Typography
-          variant="body1"
+          variant="h1"
           align="left"
           color="textPrimary"
           gutterBottom
+          className={styles.animate}
         >
+          Skills
+        </Typography>
+        <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
           HTML, CSS, JavaScript, TypeScript, Vue.js, jQuery, node.js,
           Handlebars.js, Express.js, Jest, PostgreSQL, Redux, socket.io, git
         </Typography>
