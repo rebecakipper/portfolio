@@ -1,5 +1,4 @@
 import { Typography, Box } from '@mui/material';
-import ContactForm from './ContactForm';
 
 export const ContactSection = () => {
   return (
@@ -10,21 +9,9 @@ export const ContactSection = () => {
       }}
     >
       <Box ml={16}>
-        <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
-          This is my Contact section
+        <Typography variant="h1" align="left" color="textPrimary" gutterBottom>
+          Get in touch
         </Typography>
-        <Typography
-          variant="body1"
-          align="left"
-          color="textPrimary"
-          gutterBottom
-        >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam illo
-          nam, iure laborum, eum aperiam cupiditate possimus autem vitae ipsa
-          vel nostrum tempore obcaecati illum quis voluptas nemo reprehenderit
-          qui!
-        </Typography>
-        <ContactForm />
       </Box>
     </Box>
   );

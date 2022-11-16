@@ -18,6 +18,7 @@ export const Links = () => {
       spacing={2}
       divider={<Divider orientation="vertical" flexItem />}
       className={styles.links}
+      mr={12}
     >
       {titles.map((title) => {
         return (

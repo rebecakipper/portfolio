@@ -11,6 +11,7 @@ type MyProject = {
   imageUrl: string;
   description: string;
   githubUrl: string;
+  stack: string;
 };
 
 interface Props {
@@ -23,6 +24,7 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
 
   return (
     <Modal
+      id={`projects/${project.id}`}
       open={isOpen}
       onClose={closeModal}
       aria-labelledby="modal-modal-title"
@@ -57,7 +59,7 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
         >
           <CloseIcon onClick={closeModal} sx={{ color: 'white' }} />
         </IconButton>
-        <Box p={16}>
+        <Box py={8} px={16}>
           <Typography
             variant="h3"
             align="left"
@@ -81,6 +83,9 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
             gutterBottom
           >
             {project.description}
+          </Typography>
+          <Typography variant="subtitle2" color="text.secondary">
+            {project.stack}
           </Typography>
           <Fab
             size="small"

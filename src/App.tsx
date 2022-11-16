@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import { Header } from './Header';
 import {
   Typography,
   CssBaseline,
@@ -23,7 +22,7 @@ const theme = createTheme({
     mode: 'dark',
     primary: {
       light: '#484848',
-      main: '#212121',
+      main: '#000000',
       dark: '#000000',
       contrastText: '#fffff',
     },
@@ -45,6 +44,7 @@ type MyProject = {
   imageUrl: string;
   description: string;
   githubUrl: string;
+  stack: string;
 };
 
 type Projects = MyProject[];
@@ -62,6 +62,7 @@ function App() {
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
       githubUrl: 'https://github.com/rebecakipper',
+      stack: 'HTML, jQuery, CSS',
     },
     {
       id: 2,
@@ -70,6 +71,7 @@ function App() {
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
       githubUrl: 'https://github.com/rebecakipper',
+      stack: 'Node.js/Express, Handlebars.js, Postgres',
     },
     {
       id: 3,
@@ -78,6 +80,7 @@ function App() {
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
       githubUrl: 'https://github.com/rebecakipper',
+      stack: 'Node.js/Express, Vue.js, AWS S3, Postgres',
     },
     {
       id: 4,
@@ -86,6 +89,7 @@ function App() {
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
       githubUrl: 'https://github.com/rebecakipper',
+      stack: 'React/Redux, node.js/express, Socket.IO, Postgres',
     },
     {
       id: 5,
@@ -94,6 +98,7 @@ function App() {
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
       githubUrl: 'https://github.com/rebecakipper',
+      stack: 'React, Typescript, Material UI',
     },
   ];
 
@@ -111,39 +116,40 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Paper className="App">
-          <CssBaseline />
-          <NavBar />
-          <main id="home">
-            <LeftSocial />
-            {modalActive && modalToDisplay && (
-              <ProjectModal
-                project={modalToDisplay}
-                isOpen={modalActive}
-                closeModal={() => setModalActive(false)}
-              />
-            )}
+        {/* <Paper className="App"> */}
+        <CssBaseline />
+        <NavBar />
+        <main id="home">
+          <LeftSocial />
 
-            <Box id="about">
-              <HeroSection />
-            </Box>
+          {modalActive && modalToDisplay && (
+            <ProjectModal
+              project={modalToDisplay}
+              isOpen={modalActive}
+              closeModal={() => setModalActive(false)}
+            />
+          )}
 
-            <Box id="experience">
-              <ExperienceSection />
-            </Box>
+          <Box id="about" sx={{ paddingTop: '32px ' }}>
+            <HeroSection />
+          </Box>
 
-            <Box id="projects">
-              <ProjectsSection
-                toggleModal={toggleModal}
-                arrayProjects={arrayProjects}
-              />
-            </Box>
+          <Box id="experience" sx={{ paddingTop: '32px ' }}>
+            <ExperienceSection />
+          </Box>
 
-            <Box id="contact">
-              <ContactSection />
-            </Box>
-          </main>
-        </Paper>
+          <Box id="projects" sx={{ paddingTop: '32px ' }}>
+            <ProjectsSection
+              toggleModal={toggleModal}
+              arrayProjects={arrayProjects}
+            />
+          </Box>
+
+          <Box id="contact" sx={{ paddingTop: '32px ' }}>
+            <ContactSection />
+          </Box>
+        </main>
+        {/* </Paper> */}
       </BrowserRouter>
     </ThemeProvider>
   );

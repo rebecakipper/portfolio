@@ -10,7 +10,7 @@ export const ExperienceSection = () => {
     >
       <Box ml={16}>
         <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
-          This is my experience section
+          Skills
         </Typography>
         <Typography
           variant="body1"
@@ -18,10 +18,8 @@ export const ExperienceSection = () => {
           color="textPrimary"
           gutterBottom
         >
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam illo
-          nam, iure laborum, eum aperiam cupiditate possimus autem vitae ipsa
-          vel nostrum tempore obcaecati illum quis voluptas nemo reprehenderit
-          qui!
+          HTML, CSS, JavaScript, TypeScript, Vue.js, jQuery, node.js,
+          Handlebars.js, Express.js, Jest, PostgreSQL, Redux, socket.io, git
         </Typography>
       </Box>
     </Box>

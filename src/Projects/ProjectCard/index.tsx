@@ -9,7 +9,6 @@ import {
   Link,
 } from '@mui/material';
 import { CardActionArea } from '@mui/material';
-import { AnalyticsTwoTone } from '@mui/icons-material';
 
 type Project = {
   id: number;
@@ -17,6 +16,7 @@ type Project = {
   imageUrl: string;
   description: string;
   githubUrl: string;
+  stack: string;
 };
 
 type Projects = Project[];
@@ -27,7 +27,7 @@ interface Props {
 }
 
 export const ProjectCard = (prop: Props) => {
-  const [modalActive, setModalActive] = useState(false);
+  // const [modalActive, setModalActive] = useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     return prop.toggleModal(prop.project.id);
@@ -55,7 +55,7 @@ export const ProjectCard = (prop: Props) => {
             <Typography gutterBottom variant="h5" component="div">
               {prop.project.title}
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body1" color="text.secondary">
               {prop.project.description}
             </Typography>
           </CardContent>

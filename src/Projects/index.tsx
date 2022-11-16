@@ -9,6 +9,7 @@ type MyProject = {
   imageUrl: string;
   description: string;
   githubUrl: string;
+  stack: string;
 };
 
 type Projects = MyProject[];
@@ -28,7 +29,7 @@ export const ProjectsSection = ({ toggleModal, arrayProjects }: Props) => {
     >
       <Box ml={16}>
         <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
-          This is my Projects section
+          Projects
         </Typography>
         <Typography
           variant="body1"
