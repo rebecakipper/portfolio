@@ -58,9 +58,9 @@ function App() {
     {
       id: 1,
       title: 'Connect 4',
-      imageUrl: './Logo-White.png',
+      imageUrl: './connect4-sample.png',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
       githubUrl: 'https://github.com/rebecakipper',
       stack: 'HTML, jQuery, CSS',
     },
@@ -69,7 +69,7 @@ function App() {
       title: 'Petition',
       imageUrl: './petition-sample.png',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
       githubUrl: 'https://github.com/rebecakipper',
       stack: 'Node.js/Express, Handlebars.js, Postgres',
     },
@@ -78,7 +78,7 @@ function App() {
       title: 'Imageboard',
       imageUrl: './imageboard-sample.png',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
       githubUrl: 'https://github.com/rebecakipper',
       stack: 'Node.js/Express, Vue.js, AWS S3, Postgres',
     },
@@ -87,7 +87,7 @@ function App() {
       title: 'Social Media',
       imageUrl: './socialnetwork-sample.png',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum iure eum, quas ipsum, hic repellat itaque sit deleniti alias aspernatur dolore enim corrupti rerum id earum.',
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
       githubUrl: 'https://github.com/rebecakipper',
       stack: 'React/Redux, node.js/express, Socket.IO, Postgres',
     },
