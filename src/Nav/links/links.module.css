@@ -10,7 +10,7 @@
 
 .link:hover {
   cursor: pointer;
-  color: #ffde59;
+  /* color: #ffde59; */
 }
 .underline::before {
   transform: scaleX(0);

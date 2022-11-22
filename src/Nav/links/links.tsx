@@ -1,10 +1,10 @@
-import { Stack, Divider, Box } from '@mui/material';
+import { Stack, Divider, Box, Link } from '@mui/material';
 // import { Link as LinkS } from 'react-scroll';
 // import { Link } from 'react-router-dom';
 import styles from './links.module.css';
 import { HashLink } from 'react-router-hash-link';
 
-const titles = ['About', 'Experience', 'Projects', 'Contact', 'Resume'];
+const titles = ['About', 'Experience', 'Projects', 'Contact'];
 
 export const Links = () => {
   const scrollWithOffset = (el: any) => {
@@ -41,6 +41,22 @@ export const Links = () => {
           </Box>
         );
       })}
+      <Box
+        component="span"
+        sx={{ p: 2, borderBottom: '3px solid #ffde59' }}
+        className={styles.underline}
+      >
+        <Link
+          href="https://drive.google.com/file/d/1RWTd9hRpZrkjIwxUlqhoHZAXDNSLjFcy/view?usp=sharing"
+          underline="none"
+          color="white"
+          className={styles.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </Link>
+      </Box>
     </Stack>
   );
 };

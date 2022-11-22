@@ -55,22 +55,22 @@ function App() {
     undefined
   );
   const arrayProjects: Projects = [
-    {
-      id: 1,
-      title: 'Connect 4',
-      imageUrl: './connect4-sample.png',
-      description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
-      githubUrl: 'https://github.com/rebecakipper',
-      stack: 'HTML, jQuery, CSS',
-    },
+    // {
+    //   id: 1,
+    //   title: 'Connect 4',
+    //   imageUrl: './connect4-sample.png',
+    //   description:
+    //     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
+    //   githubUrl: 'https://github.com/rebecakipper',
+    //   stack: 'HTML, jQuery, CSS',
+    // },
     {
       id: 2,
       title: 'Petition',
       imageUrl: './petition-sample.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
-      githubUrl: 'https://github.com/rebecakipper',
+      githubUrl: 'https://github.com/rebecakipper/petition',
       stack: 'Node.js/Express, Handlebars.js, Postgres',
     },
     {
@@ -79,7 +79,7 @@ function App() {
       imageUrl: './imageboard-sample.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
-      githubUrl: 'https://github.com/rebecakipper',
+      githubUrl: 'https://github.com/rebecakipper/imageboard',
       stack: 'Node.js/Express, Vue.js, AWS S3, Postgres',
     },
     {
@@ -88,7 +88,7 @@ function App() {
       imageUrl: './socialnetwork-sample.png',
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
-      githubUrl: 'https://github.com/rebecakipper',
+      githubUrl: 'https://github.com/rebecakipper/social-network',
       stack: 'React/Redux, node.js/express, Socket.IO, Postgres',
     },
     {
