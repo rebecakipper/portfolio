@@ -8,6 +8,7 @@ type MyProject = {
   title: string;
   imageUrl: string;
   description: string;
+  details: string;
   githubUrl: string;
   stack: string;
 };
@@ -38,7 +39,7 @@ export const ProjectsSection = ({ toggleModal, arrayProjects }: Props) => {
         <Grid container direction="row" spacing={4} sx={{ flexWrap: 'wrap' }}>
           {arrayProjects &&
             arrayProjects.map((project) => (
-              <Grid item xs={4} key={project.id}>
+              <Grid item xs={12} sm={6} md={6} lg={4} key={project.id}>
                 <ProjectCard project={project} toggleModal={toggleModal} />
               </Grid>
             ))}

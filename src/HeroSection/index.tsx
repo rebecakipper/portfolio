@@ -6,7 +6,7 @@ export const HeroSection = () => {
   return (
     <Box
       sx={{
-        height: '100vh',
+        minHeight: '100vh',
         // backgroundColor: 'primary',
         justifyContent: 'center',
         alignItems: 'center',
@@ -20,7 +20,7 @@ export const HeroSection = () => {
         // justifyContent="center"
         style={{ minHeight: '100vh' }}
       >
-        <Grid item xs={8}>
+        <Grid item xs={12} sm={6} md={8}>
           <Box ml={16} mt={8} mr={16}>
             <Typography
               variant="h3"
@@ -63,7 +63,7 @@ export const HeroSection = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={0} sm={0} md={2}>
           <img src="./rebeca-profile.png" alt="r" className={style.profile} />
         </Grid>
       </Grid>

@@ -4,7 +4,7 @@ import { Stack, Divider, Box, Link } from '@mui/material';
 import styles from './links.module.css';
 import { HashLink } from 'react-router-hash-link';
 
-const titles = ['About', 'Experience', 'Projects', 'Contact'];
+const titles = ['About', 'Skills', 'Projects', 'Contact'];
 
 export const Links = () => {
   const scrollWithOffset = (el: any) => {

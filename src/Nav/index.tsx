@@ -15,7 +15,7 @@ export default function NavBar() {
             backdropFilter: 'blur(8px)',
           }}
         >
-          <Toolbar sx={{ alignItems: 'strech' }}>
+          <Toolbar>
             <Typography
               align="left"
               variant="h6"

@@ -43,6 +43,7 @@ type MyProject = {
   title: string;
   imageUrl: string;
   description: string;
+  details: string;
   githubUrl: string;
   stack: string;
 };
@@ -69,34 +70,42 @@ function App() {
       title: 'Petition',
       imageUrl: './petition-sample.png',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
+        'Users can register, log in & out, add profile infos and sign an online petition to make fake PNG images illegal.',
+      details:
+        'Users can register, log in & out, add profile infos and sign an online petition to make fake PNG images illegal.',
       githubUrl: 'https://github.com/rebecakipper/petition',
-      stack: 'Node.js/Express, Handlebars.js, Postgres',
+      stack: 'Node.js/Express, Handlebars.js, PostgreSQL',
     },
     {
       id: 3,
-      title: 'Imageboard',
+      title: '<img> board',
       imageUrl: './imageboard-sample.png',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
+        'Image sharing platform where users can upload photos with captions and descriptions as well as commment on other users posts',
+      details:
+        'Image sharing platform where users can upload photos with captions and descriptions as well as commment on other users posts',
       githubUrl: 'https://github.com/rebecakipper/imageboard',
-      stack: 'Node.js/Express, Vue.js, AWS S3, Postgres',
+      stack: 'Node.js/Express, Vue.js, AWS S3, PostgreSQL',
     },
     {
       id: 4,
-      title: 'Social Media',
+      title: 'Juniper Social',
       imageUrl: './socialnetwork-sample.png',
       description:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident totam consectetur, asperiores dolorum.',
+        'A social network where users cans users can register, login, add a profile pictures, bios, search for other users, add friends and communicate through a global live chat.',
+      details:
+        'A social network where users cans users can register, login, add a profile pictures, bios, search for other users, add friends and communicate through a global live chat.',
       githubUrl: 'https://github.com/rebecakipper/social-network',
-      stack: 'React/Redux, node.js/express, Socket.IO, Postgres',
+      stack: 'React/Redux, node.js/express, Socket.IO, PostgreSQL',
     },
     {
       id: 5,
       title: 'Personal Portfolio',
       imageUrl: './portfolio_sample.png',
       description:
-        'Personal portifolio Project, created on React and Typescript, using custome Material UI theme',
+        'Personal portifolio project, created with React and Typescript, using custom Material UI themes.',
+      details:
+        'Personal portifolio project, created with React and Typescript, using custom Material UI themes.',
       githubUrl: 'https://github.com/rebecakipper/portfolio',
       stack: 'React, Typescript, Material UI',
     },
@@ -134,7 +143,7 @@ function App() {
             <HeroSection />
           </Box>
 
-          <Box id="experience" sx={{ paddingTop: '32px ' }}>
+          <Box id="skills" sx={{ paddingTop: '32px ' }}>
             <ExperienceSection />
           </Box>
 

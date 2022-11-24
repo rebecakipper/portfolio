@@ -5,8 +5,9 @@ export const ExperienceSection = () => {
   return (
     <Box
       sx={{
-        height: '100vh',
+        minHeight: '100vh',
         backgroundColor: 'primary',
+        overflow: 'auto',
       }}
     >
       <Box mx={16}>
