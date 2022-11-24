@@ -3,6 +3,7 @@ import { Stack, Divider, Box, Link } from '@mui/material';
 // import { Link } from 'react-router-dom';
 import styles from './links.module.css';
 import { HashLink } from 'react-router-hash-link';
+import DownloadIcon from '@mui/icons-material/Download';
 
 const titles = ['About', 'Skills', 'Projects', 'Contact'];
 

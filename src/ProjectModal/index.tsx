@@ -11,6 +11,7 @@ type MyProject = {
   title: string;
   imageUrl: string;
   description: string;
+  details: string;
   githubUrl: string;
   stack: string;
 };
@@ -66,13 +67,11 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
           sx={{
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
-            alignContent: 'center',
           }}
         >
           <Typography
             variant="h2"
-            align="left"
+            align="center"
             color="textPrimary"
             gutterBottom
           >
@@ -87,32 +86,45 @@ export const ProjectModal = ({ project, isOpen, closeModal }: Props) => {
 
           <Typography
             variant="h5"
-            align="left"
+            // align="center"
             color="textPrimary"
             gutterBottom
           >
-            {project.description}
+            {project.details}
           </Typography>
-          <Typography variant="subtitle2" color="text.secondary">
+          <Typography
+            variant="subtitle1"
+            color="text.secondary"
+            // align="center"
+            gutterBottom
+          >
             Technologies: {project.stack}
           </Typography>
-          <Fab
-            size="small"
-            aria-label="LinkedIn"
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              backgroundColor: 'transparent',
-              color: 'secondary.main',
-              '&:hover': {
-                backgroundColor: 'transparent',
-                color: 'secondary.light',
-              },
-            }}
+          <Typography
+            variant="subtitle2"
+            color="text.secondary"
+            // align="center"
+            gutterBottom
           >
-            <GitHubIcon />
-          </Fab>
+            Check this project on Github{' '}
+            <Fab
+              size="small"
+              aria-label="LinkedIn"
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                backgroundColor: 'transparent',
+                color: 'secondary.main',
+                '&:hover': {
+                  backgroundColor: 'transparent',
+                  color: 'secondary.light',
+                },
+              }}
+            >
+              <GitHubIcon />
+            </Fab>
+          </Typography>
         </Box>
       </Box>
     </Modal>

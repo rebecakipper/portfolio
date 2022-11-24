@@ -92,9 +92,9 @@ function App() {
       title: 'Juniper Social',
       imageUrl: './socialnetwork-sample.png',
       description:
-        'A social network where users cans users can register, login, add a profile pictures, bios, search for other users, add friends and communicate through a global live chat.',
+        'A social network where users can register, login, add a profile picture, bios, search for other users, add friends and communicate through a global live chat.',
       details:
-        'A social network where users cans users can register, login, add a profile pictures, bios, search for other users, add friends and communicate through a global live chat.',
+        'A social network where users can register, login, add a profile picture, bios, search for other users, add friends and communicate through a global live chat.',
       githubUrl: 'https://github.com/rebecakipper/social-network',
       stack: 'React/Redux, node.js/express, Socket.IO, PostgreSQL',
     },
@@ -103,9 +103,9 @@ function App() {
       title: 'Personal Portfolio',
       imageUrl: './portfolio_sample.png',
       description:
-        'Personal portifolio project, created with React and Typescript, using custom Material UI themes.',
+        'My own personal portfolio website, created to showcase the projects I have developed since the beginning of my coding journey.',
       details:
-        'Personal portifolio project, created with React and Typescript, using custom Material UI themes.',
+        'My own personal portfolio website, created to showcase the projects I have developed since the beginning of my coding journey. This is an ongoing project, and it is intended as a challenge to learn more about Typescript, Design systems (MUI), animations and deployment.',
       githubUrl: 'https://github.com/rebecakipper/portfolio',
       stack: 'React, Typescript, Material UI',
     },
