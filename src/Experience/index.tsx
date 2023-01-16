@@ -21,8 +21,9 @@ export const ExperienceSection = () => {
           Skills
         </Typography>
         <Typography variant="h3" align="left" color="textPrimary" gutterBottom>
-          HTML, CSS, JavaScript, TypeScript, Vue.js, jQuery, node.js,
-          Handlebars.js, Express.js, Jest, PostgreSQL, Redux, socket.io, git
+          HTML, CSS, JavaScript, TypeScript, React.js, Vue.js, jQuery, node.js,
+          Handlebars.js, Express.js, Jest, PostgreSQL, MongoDB, Redux,
+          socket.io, git, MUI.
         </Typography>
       </Box>
     </Box>

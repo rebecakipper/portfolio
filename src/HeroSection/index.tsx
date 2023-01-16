@@ -63,7 +63,7 @@ export const HeroSection = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={0} sm={0} md={2}>
+        <Grid item xs={0} sm={0} md={2} mr={16}>
           <img src="./rebeca-profile.png" alt="r" className={style.profile} />
         </Grid>
       </Grid>

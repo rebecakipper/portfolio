@@ -105,7 +105,7 @@ function App() {
       description:
         'My own personal portfolio website, created to showcase the projects I have developed since the beginning of my coding journey.',
       details:
-        'My own personal portfolio website, created to showcase the projects I have developed since the beginning of my coding journey. This is an ongoing project, and it is intended as a challenge to learn more about Typescript, Design systems (MUI), animations and deployment.',
+        'My own personal portfolio website, created to showcase the projects I have developed since the beginning of my coding journey. This is an ongoing project, and it is intended as a challenge to learn more about Typescript, Material UI), animations and deployment.',
       githubUrl: 'https://github.com/rebecakipper/portfolio',
       stack: 'React, Typescript, Material UI',
     },

@@ -31,7 +31,7 @@ export const ContactSection = () => {
           color="textPrimary"
           gutterBottom
         >
-          email:rebecakipper@gmail.com
+          email: rebecakipper@gmail.com
         </Typography>
       </Box>
     </Box>
