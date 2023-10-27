@@ -33,7 +33,7 @@ export const ProjectsSection = ({ toggleModal, arrayProjects }: Props) => {
           Projects
         </Typography>
         <Typography variant="h6" align="left" color="textPrimary" gutterBottom>
-          Project developed at the SPICED Academy 12-week Full-Stack Web
+          Projects developed at the SPICED Academy 12-week Full-Stack Web
           Development Bootcamp from 08.2022 to 11.2022:
         </Typography>
         <Grid container direction="row" spacing={4} sx={{ flexWrap: 'wrap' }}>
