@@ -48,7 +48,7 @@ export const Links = () => {
         className={styles.underline}
       >
         <Link
-          href="https://drive.google.com/file/d/1RWTd9hRpZrkjIwxUlqhoHZAXDNSLjFcy/view?usp=sharing"
+          href="https://drive.google.com/file/d/1iUYMYs-X5NQAEIfJx3s3T4DWXlho4-ch/view?usp=sharing"
           underline="none"
           color="white"
           className={styles.link}
