@@ -1,9 +1,6 @@
 import { Stack, Divider, Box, Link } from '@mui/material';
-// import { Link as LinkS } from 'react-scroll';
-// import { Link } from 'react-router-dom';
 import styles from './links.module.css';
 import { HashLink } from 'react-router-hash-link';
-import DownloadIcon from '@mui/icons-material/Download';
 
 const titles = ['About', 'Skills', 'Projects', 'Contact'];
 
@@ -32,8 +29,6 @@ export const Links = () => {
             <HashLink
               smooth
               to={`#${title.toLowerCase()}`}
-              // activeClass="active"
-              // duration={500}
               scroll={(el) => scrollWithOffset(el)}
               className={styles.link}
             >
