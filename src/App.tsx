@@ -5,6 +5,7 @@ import {
   CssBaseline,
   createTheme,
   ThemeProvider,
+  responsiveFontSizes,
   Paper,
   Box,
 } from '@mui/material';
@@ -17,7 +18,7 @@ import { ProjectsSection } from './Projects';
 import { ContactSection } from './ContactMe';
 import { ProjectModal } from './ProjectModal';
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
@@ -37,6 +38,8 @@ const theme = createTheme({
     fontFamily: ['Press Start 2P'].join(','),
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 type MyProject = {
   id: number;
