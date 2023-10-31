@@ -1,27 +1,22 @@
 import React from 'react';
-import { Typography, Container, Box, Grid } from '@mui/material';
+import { Typography, Container, Box } from '@mui/material';
+import Grid from '@mui/material/Unstable_Grid2';
 import style from './index.module.css';
+import { yellow } from '@mui/material/colors';
 
 export const HeroSection = () => {
   return (
-    <Box
-      sx={{
-        minHeight: '100vh',
-        // backgroundColor: 'primary',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
+    <Box sx={{ flexGrow: 1 }}>
       <Grid
         container
-        spacing={0}
-        direction="row"
+        ml={16}
+        mr={16}
         alignItems="center"
-        // justifyContent="center"
-        style={{ minHeight: '100vh' }}
+        spacing={6}
+        style={{ minHeight: '100vh', maxWidth: '100%' }}
       >
-        <Grid item xs={12} sm={6} md={8}>
-          <Box ml={16} mt={8} mr={16}>
+        <Grid xs={12} sm={12} md={7} lg={7} xl={7}>
+          <Box component="div" className={style.headline}>
             <Typography
               variant="h3"
               align="left"
@@ -43,27 +38,17 @@ export const HeroSection = () => {
                 className={style.rebs}
               >
                 Rebeca
-              </Box>{' '}
-              <Typography
-                variant="h1"
-                align="left"
-                color="textSecondary"
-                paragraph
-              >
-                a web developer
-                <Typography
-                  variant="h1"
-                  align="left"
-                  color="textSecondary"
-                  paragraph
-                >
-                  based in Berlin.
-                </Typography>
-              </Typography>
+              </Box>
+            </Typography>
+            <Typography variant="h1" align="left" color="textSecondary" noWrap>
+              a web developer
+            </Typography>
+            <Typography variant="h1" align="left" color="textSecondary" noWrap>
+              based in Berlin.
             </Typography>
           </Box>
         </Grid>
-        <Grid item xs={0} sm={0} md={2} mr={16}>
+        <Grid xs={0} sm={0} md={5} lg={5} xl={5}>
           <img src="./rebeca-profile.png" alt="r" className={style.profile} />
         </Grid>
       </Grid>

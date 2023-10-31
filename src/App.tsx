@@ -36,6 +36,12 @@ let theme = createTheme({
   },
   typography: {
     fontFamily: ['Press Start 2P'].join(','),
+    h1: {
+      fontSize: '6rem',
+      '@media (min-width:1320px)': {
+        fontSize: '4rem',
+      },
+    },
   },
 });
 
