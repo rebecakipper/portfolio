@@ -1,8 +1,7 @@
 .profile {
-  object-fit: cover;
-  max-height: 400px;
+  max-height: 500px;
+  max-width: fill;
 }
-
 .rebs::before {
   transform: scaleX(0);
   transform-origin: bottom right;
@@ -24,12 +23,15 @@
   inset: 0 0 0 0;
   background: #ffde59;
   z-index: -1;
-  transition: transform 0.3s ease;
+  transition: transform 0.9s ease;
 }
 
 .rebs {
   position: relative;
-  /* font-size: 5rem; */
   text-decoration: none;
   color: white;
+}
+
+.headline {
+  font-size: 4rem;
 }
